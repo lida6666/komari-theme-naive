@@ -412,6 +412,10 @@ const cpuChartOption = computed(() => ({
       name: '负载',
       nameTextStyle: { color: chartThemeColors.value.textSecondary, padding: [0, 0, 0, 40] },
       min: 0,
+      max: (value: { max: number }) => {
+        const cores = nodeInfo.value?.cpu_cores || 1
+        return Math.max(cores, value.max)
+      },
       splitLine: { show: false },
     },
   ],
