@@ -5,6 +5,19 @@
 <img src="docs/preview.png" alt="Komari Theme Naive" />
 </a>
 
+
+## 自定义修改
+ 
+### `src/views/InstanceDetail.vue`
+ 
+- 存储信息卡片中的内存、内存交换、硬盘由仅显示总量改为显示 `使用量 / 总量` 格式（例：`1.1 GB / 1.9 GB`）
+### `src/components/LoadChart.vue`
+ 
+- CPU 图表新增图例（`CPU` / `负载`），样式与网络、连接数图表保持一致
+- 内存图表新增图例（`RAM` / `Swap`），样式与网络、连接数图表保持一致
+- CPU 图表中系统负载 Y 轴上限默认设为节点 CPU 核心数
+- 
+
 ## 使用
 
 1. 从 [Release 页面](https://github.com/lyimoexiao/komari-theme-naive/releases) 下载最新的 `komari-theme-naive-build-*.zip` 文件
